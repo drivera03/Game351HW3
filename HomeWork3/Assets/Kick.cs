@@ -6,6 +6,7 @@ public class Kick : MonoBehaviour
 {
     public float kickForce = 500f;
     public float kickRadius = 0.5f;
+    public string targetTag = "enemy";
     public KeyCode kickKey = KeyCode.E;
     public Animator animator;
 
@@ -21,30 +22,22 @@ public class Kick : MonoBehaviour
     {
         if (Input.GetKeyDown(kickKey))
         {
-            // Trigger a random kick animation
-            int randomKick = Random.Range(1, 4); // returns 1, 2, or 3
+            int randomKick = Random.Range(1, 4); 
             animator.SetTrigger("Kick" + randomKick);
         }
     }
 
-    // This method is called from an Animation Event at the peak of the kick
-    public void PerformKick()
+    private void OnTriggerEnter(Collider other)    
     {
-        // Kick origin is slightly in front of the player
-        Vector3 kickOrigin = transform.position + transform.forward * 1.0f; // 1.0f is kick distance
-        float kickRadius = 0.5f; // Same as before
-
-        Collider[] hitEnemies = Physics.OverlapSphere(kickOrigin, kickRadius);
-        foreach (Collider enemy in hitEnemies)
+                if (other.CompareTag(targetTag))
         {
-            if (enemy.CompareTag("enemy"))
+            Rigidbody rb = other.attachedRigidbody;
+
+            if (rb != null)
             {
-                Rigidbody rb = enemy.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    Vector3 kickDirection = (enemy.transform.position - transform.position).normalized;
-                    rb.AddForce(kickDirection * kickForce);
-                }
+                // Calculate direction from foot to target
+                Vector3 kickDirection = (other.transform.position - transform.position).normalized;
+                rb.AddForce(kickDirection * kickForce);
             }
         }
     }
