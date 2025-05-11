@@ -19,9 +19,8 @@ public class Projectiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.name == "RevolverBullet(Clone)") //"BulletPrefab(Clone)
-        {
-            Destroy(gameObject, TimeToLive);
-        }
+
+        Destroy(gameObject, TimeToLive);
+
     }
 }
