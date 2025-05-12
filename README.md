@@ -1,16 +1,15 @@
 ________________________________________________________________________________________________
 The different features that are added to our unity project are
-1. Driving a HoverCraft (WASD to drive then Q to lean left and E to lean right)
-2. Three Car Types
-3. Hovercraft Levitation 
-4. Toggling between Cars (C key)
-5. Laser-Firing Car (Purple car/Laser car)
-6. More Realistic Effects(Tail light with bloom and trails, sound to the lasers, engine particle)
+1. Shoot with the F key 
+2. Two different camera views (T key)
+3. The enemy shoots back at the player and also follow the player
+4. Player can kick and there are 3 different animation
+
 
 Two ways to install the Unity Project:
 
 Way 1:
-1) Go to this link: https://github.com/drivera03/Game351HW3
+1) Go to this link: https://github.com/drivera03/Game351HW2
 2) Click on the Green Button that says "< > Code"
 3) Copy the HTTPS link that it gives with the copy button
 4) Open your computer Terminals
@@ -28,7 +27,7 @@ Way 1:
 
 
 Way 2:
-1) Unzip the file
+1) Download everything from the Google Drive file
 2) Open Unity Hub
 3) Press ADD, then "ADD project from disk"
 4) Find the folder, then open it.
@@ -41,4 +40,5 @@ Credits:
 Made By: Daniel Rivera, Taylor Poole, Tristian Costa 
 
 Freeware media assets were used from the following sources:
-(1) 
+
+
