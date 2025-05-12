@@ -14,9 +14,9 @@ public class EnemyShooting : MonoBehaviour
     private float timePassed =0f;
    void Start()
    {
-    foreach(Transform spawnPoint in bulletSpawnPoints){
+    foreach(Transform SpawnPoint in bulletSpawnPoints){
     float randomAngle = Random.Range(Min_Angle, Max_Angle);
-    spawnPoint.rotation = Quaternion.Euler(0, 0, randomAngle);
+    SpawnPoint.rotation = Quaternion.Euler(0, 0, randomAngle);
     }
    }
     
@@ -27,9 +27,9 @@ public class EnemyShooting : MonoBehaviour
             if (timePassed > 30f ){
               
 
-               foreach (Transform spawnPoint in bulletSpawnPoints)
+               foreach (Transform SpawnPoint in bulletSpawnPoints)
             {
-                Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+                Instantiate(bulletPrefab, SpawnPoint.position, SpawnPoint.rotation);
                 
             }
             timePassed = 0f;
