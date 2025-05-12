@@ -5,6 +5,8 @@ using UnityEngine;
 public class CollisionTnt : MonoBehaviour
 {
     public GameObject HitAnimation;
+
+    public GameObject Debre;
     // Start is called before the first frame update
     void OnCollisionEnter(Collision collision) {
         GameObject otherObj = collision.gameObject;
@@ -20,6 +22,7 @@ public class CollisionTnt : MonoBehaviour
         GameObject otherObj = collider.gameObject;
         Debug.Log("Triggered with: " + otherObj);
         Instantiate(HitAnimation, transform.position, transform.rotation);
+        Instantiate(Debre, transform.position, transform.rotation);
         Destroy(otherObj);
         Destroy(gameObject);
     }
