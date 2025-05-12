@@ -2,7 +2,7 @@ ________________________________________________________________________________
 The different features that are added to our unity project are
 1. Shoot with the F key 
 2. Two different camera views (T key)
-3. The enemy shoots back at the player and also follow the player
+3. The enemy shoots back at the player and also follows the player
 4. Player can kick and there are 3 different animation
 
 
@@ -40,5 +40,6 @@ Credits:
 Made By: Daniel Rivera, Taylor Poole, Tristian Costa 
 
 Freeware media assets were used from the following sources:
+(1) https://assetstore.unity.com/packages/3d/props/weapons/mid-poly-gun-weapons-311722
 
 
