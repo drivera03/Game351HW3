@@ -5,6 +5,13 @@ The different features that are added to our unity project are
 3. The enemy shoots back at the player and also follows the player
 4. Player can kick and there are 3 different animation
 
+What we are missing:
+Monsoon (optional)
+Freeswitch Camera (Og I am kinda lost on how to do this) when holding right-click - prob something with cinemachine
+Dolly scene (I can't code it to switch from cutscene to dolly, then to character)
+
+Possible Errors;
+(1) The player can still move during cutscene I think we just need a script that disables the character until esc is pressed
 
 Two ways to install the Unity Project:
 
