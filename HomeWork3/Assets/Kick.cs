@@ -7,7 +7,7 @@ public class Kick : MonoBehaviour
     public float kickForce = 500f;
     public float kickRadius = 0.5f;
     public string targetTag = "enemy";
-    public KeyCode kickKey = KeyCode.E;
+    public KeyCode kickKey = KeyCode.Space;
     public Animator animator;
 
     void Awake()
